@@ -7,10 +7,9 @@ const App = () => {
   // U of M Brand Colors
   const UM_BLUE = "#00274C";
   const UM_MAIZE = "#FFCB05";
-  const UM_LIGHT_BLUE = "#1D4477"; // Derived lighter blue for accents
-  const UM_PALE_BLUE = "#E6E9ED"; // Very pale blue for backgrounds
+  const UM_LIGHT_BLUE = "#1D4477"; 
+  const UM_PALE_BLUE = "#E6E9ED"; 
 
-  // Placeholder Data Structure
   const data = {
     name: "[Son's Name]",
     targetUniversity: "University of Michigan",
@@ -81,7 +80,7 @@ const App = () => {
 
       <main className="max-w-5xl mx-auto px-4 pt-8">
         
-        {/* Header Hero - U of M Blue Background */}
+        {/* Header Hero */}
         <div 
           className="rounded-2xl p-8 text-white mb-8 shadow-xl"
           style={{ backgroundColor: UM_BLUE }}
@@ -103,7 +102,6 @@ const App = () => {
               </div>
             </div>
 
-            {/* Smaller rounded box for bridge info */}
             <div 
               className="p-5 rounded-xl border flex items-center gap-6"
               style={{ backgroundColor: UM_LIGHT_BLUE, borderColor: 'rgba(255,255,255,0.1)' }}
@@ -124,13 +122,8 @@ const App = () => {
           </div>
         </div>
 
-        {/* Dynamic Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
-          {/* Left Column: About Me & Photos */}
           <div className="lg:col-span-2 space-y-8">
-            
-            {/* About Me Section - Blue Background with Maize Text Header */}
             <section className="bg-white rounded-xl shadow-sm border overflow-hidden">
               <SectionHeader 
                 icon={Camera} 
@@ -143,7 +136,6 @@ const App = () => {
                   "From the first time I set foot on the University of Michigan campus as a 6-year-old, I knew I was meant to be a Wolverine. My journey through high school has been defined by excellence in the classroom, leadership on the athletic field, and a commitment to service. This bridge funding represents the final step in realizing a lifelong dream..."
                 </p>
                 
-                {/* Photo Grid - 6 Slots */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {[
                     { label: "Childhood Dream", year: "2012" },
@@ -163,7 +155,6 @@ const App = () => {
               </div>
             </section>
 
-            {/* Detailed Content Tabs View */}
             <div className="bg-white rounded-xl shadow-sm border min-h-[400px]">
               <div className="flex border-b overflow-x-auto">
                 <button onClick={() => setActiveTab('profile')} className={`flex-1 min-w-[100px] p-4 font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-colors ${activeTab === 'profile' ? 'bg-[#F0F4F8] text-[#00274C] border-b-2 border-[#00274C]' : 'text-slate-400 hover:bg-slate-50'}`}>
@@ -204,7 +195,7 @@ const App = () => {
                 {activeTab === 'profile' && (
                    <div className="animate-in fade-in slide-in-from-bottom-2">
                      <h3 className="text-lg font-bold mb-4 text-[#00274C]">Mission Statement</h3>
-                     <p className="text-slate-600 leading-relaxed italic border-l-4 border-michigan-maize pl-4 py-2">
+                     <p className="text-slate-600 leading-relaxed italic border-l-4 border-yellow-400 pl-4 py-2">
                        "To embody the Michigan spirit of 'The Leaders and Best' by combining rigorous academic inquiry with a commitment to community impact and athletic excellence."
                      </p>
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -244,10 +235,7 @@ const App = () => {
             </div>
           </div>
 
-          {/* Right Column: Funding & Testimonials */}
           <div className="space-y-8">
-            
-            {/* Funding Breakdown Card */}
             <section className="bg-white rounded-xl shadow-sm border overflow-hidden">
               <SectionHeader 
                 icon={DollarSign} 
@@ -279,7 +267,6 @@ const App = () => {
                     <span className="text-[#00274C]">${(data.fundingGoal - data.currentFunding).toLocaleString()}</span>
                   </div>
                 </div>
-                {/* Detailed Budget Plan Button - Lighter Blue */}
                 <button 
                   className="w-full text-white font-bold py-3 rounded-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 mt-4 shadow-lg"
                   style={{ backgroundColor: UM_LIGHT_BLUE }}
@@ -289,7 +276,6 @@ const App = () => {
               </div>
             </section>
 
-            {/* What Others Say - Lighter Blue Theme */}
             <section className="bg-white rounded-xl shadow-sm border overflow-hidden">
               <SectionHeader 
                 icon={Quote} 
@@ -309,13 +295,11 @@ const App = () => {
               </div>
             </section>
 
-            {/* Scan for Video Intro - Michigan Blue Background with Maize Text */}
             <div 
               className="p-6 rounded-xl text-white text-center shadow-lg"
               style={{ backgroundColor: UM_BLUE }}
             >
               <div className="w-24 h-24 bg-white mx-auto mb-4 rounded-lg flex items-center justify-center">
-                {/* QR Code Placeholder stays white as requested */}
                 <div className="grid grid-cols-3 gap-1">
                   {[...Array(9)].map((_, i) => <div key={i} className="w-4 h-4 bg-[#00274C]"></div>)}
                 </div>
@@ -330,12 +314,10 @@ const App = () => {
                 View personal statement and athletic highlights
               </p>
             </div>
-
           </div>
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="max-w-5xl mx-auto px-4 mt-12 text-center text-slate-400 text-xs">
         <p>© 2025 [Family Name] • Financial Support Request Portfolio</p>
         <p className="mt-1" style={{ color: UM_BLUE }}>GO BLUE!</p>
