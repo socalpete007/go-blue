@@ -23,12 +23,12 @@ const App = () => {
   const data = {
     name: "Ben Heinemann",
     targetUniversity: "University of Michigan",
-    fundingGoal: 160,000, // Update this to your total gap
-    currentFunding: 75,000, // Update this as you secure funds
+    fundingGoal: "160,000", // Update this to your total gap
+    currentFunding: "75,000", // Update this as you secure funds
     academicGpa: "4.7 / 4.0",
     academicRank: "Top 5%",
     athleticSport: "Basketball",
-    athleticRole: "[Forward/Captain]",
+    athleticRole: "Forward/Captain",
   };
 
   const SectionHeader = ({ icon: Icon, title, bgColor, textColor }) => (
