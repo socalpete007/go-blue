@@ -23,7 +23,7 @@ const App = () => {
   const data = {
     name: "Ben Heinemann",
     targetUniversity: "University of Michigan",
-    fundingGoal: "160,000", // Update this to your total gap
+    fundingGoal: "50,000", // Update this to your total gap
     currentFunding: "75,000", // Update this as you secure funds
     academicGpa: "4.7 / 4.0",
     academicRank: "Top 5%",
