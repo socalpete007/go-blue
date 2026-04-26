@@ -1,9 +1,0 @@
-/ (root)
-├── index.html
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-├── postcss.config.js
-└── src/
-    ├── main.jsx
-    └── App.jsx  <-- (This is your portfolio.jsx code)
