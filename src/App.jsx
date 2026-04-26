@@ -21,14 +21,14 @@ const App = () => {
   const UM_PALE_BLUE = "#F0F4F8"; 
 
   const data = {
-    name: "[Son's Name]",
+    name: "Ben Heinemann",
     targetUniversity: "University of Michigan",
-    fundingGoal: 25000, // Update this to your total gap
-    currentFunding: 15000, // Update this as you secure funds
-    academicGpa: "4.XX / 4.0",
-    academicRank: "Top X%",
-    athleticSport: "[Primary Sport]",
-    athleticRole: "[Position/Captain]",
+    fundingGoal: 160,000, // Update this to your total gap
+    currentFunding: 75,000, // Update this as you secure funds
+    academicGpa: "4.7 / 4.0",
+    academicRank: "Top 5%",
+    athleticSport: "Basketball",
+    athleticRole: "[Forward/Captain]",
   };
 
   const SectionHeader = ({ icon: Icon, title, bgColor, textColor }) => (
