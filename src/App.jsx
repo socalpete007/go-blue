@@ -170,7 +170,7 @@ const App = () => {
               <div className="p-6 space-y-4">
                 <div className="flex justify-between text-sm py-1 border-b">
                   <span className="text-slate-600">University Aid</span>
-                  <span className="font-bold text-green-600">$XX,XXX</span>
+                  <span className="font-bold text-green-600">$20,000</span>
                 </div>
                 <div className="flex justify-between text-sm py-1 font-bold">
                   <span className="text-[#00274C] uppercase text-xs">Bridge Gap</span>
