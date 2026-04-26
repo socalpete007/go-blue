@@ -23,14 +23,14 @@ const App = () => {
   const UM_PALE_BLUE = "#F0F4F8"; 
 
   const data = {
-    name: "[Son's Name]",
+    name: "Ben Heinemann",
     targetUniversity: "University of Michigan",
     fundingGoal: 25000, 
     currentFunding: 15000, 
-    academicGpa: "4.XX / 4.0",
-    academicRank: "Top X%",
-    athleticSport: "[Primary Sport]",
-    athleticRole: "[Position/Captain]",
+    academicGpa: "4.65 / 4.0",
+    academicRank: "Top 5%",
+    athleticSport: "Basketball",
+    athleticRole: "Foward/Captain",
   };
 
   const SectionHeader = ({ icon: Icon, title, bgColor, textColor }) => (
@@ -160,7 +160,7 @@ const App = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
               <p className="font-semibold tracking-widest uppercase text-xs mb-1" style={{ color: '#A5B9D1' }}>
-                Class of 2025 • High School Senior
+                Class of 2026 • High School Senior
               </p>
               <h1 className="text-4xl md:text-5xl font-black mb-2" style={{ color: UM_MAIZE }}>{data.name}</h1>
               <div className="flex items-center gap-2 italic text-sm" style={{ color: '#A5B9D1' }}>
@@ -275,19 +275,19 @@ const App = () => {
               <SectionHeader icon={Quote} title="What Others Say" bgColor={UM_PALE_BLUE} textColor={UM_BLUE} />
               <div className="p-6 space-y-6">
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Insert Academic Quote Here: Highlighting intellectual curiosity and classroom leadership."
+                  "Academic Quote: Highlighting intellectual curiosity and classroom leadership."
                   <p className="mt-2 font-bold text-[#00274C] not-italic">— [Teacher Name], [Subject]</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Insert Athletic Quote Here: Highlighting discipline, teamwork, and grit on the field."
+                  "Athletic Quote: Highlighting discipline, teamwork, and grit on the field."
                   <p className="mt-2 font-bold text-[#00274C] not-italic">— [Coach Name], [Sport]</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Insert Leadership Quote Here: Focusing on how he leads by example and supports peers."
+                  "Leadership Quote: Focusing on how he leads by example and supports peers."
                   <p className="mt-2 font-bold text-[#00274C] not-italic">— [Name], [Title/Organization]</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Insert Character Quote Here: Highlighting integrity and commitment to the community."
+                  "Character Quote: Highlighting integrity and commitment to the community."
                   <p className="mt-2 font-bold text-[#00274C] not-italic">— [Name], [Relationship]</p>
                 </div>
               </div>
@@ -308,7 +308,7 @@ const App = () => {
       </main>
 
       <footer className="max-w-5xl mx-auto px-4 mt-16 text-center text-slate-400 text-[10px] border-t pt-8">
-        <p>© 2025 [Family Name] • Michigan Funding Request Microsite</p>
+        <p>© 2026 Ben Heinemann • Michigan Funding Request Microsite</p>
         <p className="mt-2 font-black tracking-[0.2em] text-[#00274C]">GO BLUE!</p>
       </footer>
     </div>
