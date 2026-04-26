@@ -99,7 +99,7 @@ const App = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
               <p className="font-semibold tracking-widest uppercase text-xs mb-1" style={{ color: '#A5B9D1' }}>
-                Class of 2025 • High School Senior
+                Class of 2026 • High School Senior
               </p>
               <h1 className="text-4xl md:text-5xl font-black mb-2" style={{ color: UM_MAIZE }}>{data.name}</h1>
               <div className="flex items-center gap-2 italic text-sm" style={{ color: '#A5B9D1' }}>
@@ -196,7 +196,7 @@ const App = () => {
       </main>
 
       <footer className="max-w-5xl mx-auto px-4 mt-16 text-center text-slate-400 text-[10px]">
-        <p>© 2025 [Family Name] • GO BLUE!</p>
+        <p>© 2026 Heinemann Family • GO BLUE!</p>
       </footer>
     </div>
   );
