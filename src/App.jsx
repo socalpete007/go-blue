@@ -275,20 +275,20 @@ const App = () => {
               <SectionHeader icon={Quote} title="What Others Say" bgColor={UM_PALE_BLUE} textColor={UM_BLUE} />
               <div className="p-6 space-y-6">
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Academic Quote: Highlighting intellectual curiosity and classroom leadership."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Teacher Name], [Subject]</p>
+                  "Ben sets a new standard in intellectual curiosity and classroom leadership."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Mrs. Teacher, Anatomy Honors</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Athletic Quote: Highlighting discipline, teamwork, and grit on the field."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Coach Name], [Sport]</p>
+                  "Ben is the true definition of a student-athlete. His discipline, teamwork, and dedication in the classroom is exactly what he brings to his basketball team."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Coach Keith, Basketball</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Leadership Quote: Focusing on how he leads by example and supports peers."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Name], [Title/Organization]</p>
+                  "Ben is the type of captain who by leads by example and always supports his team."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Genke , Varsity Basketball Teammate</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Character Quote: Highlighting integrity and commitment to the community."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Name], [Relationship]</p>
+                  "Ben's character and integrity are a gold standard amongst his peers."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Derek Berz, Family Friend and COO Torrance Memorial Hospital</p>
                 </div>
               </div>
             </section>
