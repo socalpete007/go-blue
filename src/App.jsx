@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { 
   Camera, 
   GraduationCap, 
@@ -15,6 +15,16 @@ import {
 const App = () => {
   const [activeTab, setActiveTab] = useState('profile');
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
+  
+  // Create a reference to the tabs section for anchor scrolling
+  const tabsSectionRef = useRef(null);
+
+  // Helper function to switch tabs and scroll to the section
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+    // Smooth scroll to the tabs section
+    tabsSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   // Official University of Michigan Hex Codes
   const UM_BLUE = "#00274C";
@@ -25,23 +35,23 @@ const App = () => {
   // PHOTO CONFIGURATION
   // Replace these placeholders with the "Direct Links" from your Cloudinary collection
   const photoUrls = [
-    "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319107/C3_Ben-Growing-Up-Michigan_qmppuk.jpg",
-    "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319106/C4_Ben-Growing-Up-Michigan_ktcjmc.jpg",
-    "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319109/A1_Ben-Academic_cklq6d.jpg",
-    "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319104/B1_Ben-Basketball_hiayts.jpg",
-    "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319103/A2_Ben-Academic_a2ufje.jpg",
-    "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319105/A4_Ben-Academic_vcxldb.jpg"
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+1",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+2",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+3",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+4",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+5",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+6"
   ];
 
   const data = {
-    name: "Ben Heinemann",
+    name: "[Son's Name]",
     targetUniversity: "University of Michigan",
-    fundingGoal: 320000, 
-    currentFunding: 240000, 
-    academicGpa: "4.65 / 4.0",
-    academicRank: "Top 5%",
-    athleticSport: "Basketball",
-    athleticRole: "Forward/Captain",
+    fundingGoal: 25000, 
+    currentFunding: 15000, 
+    academicGpa: "4.XX / 4.0",
+    academicRank: "Top X%",
+    athleticSport: "[Primary Sport]",
+    athleticRole: "[Position/Captain]",
   };
 
   const SectionHeader = ({ icon: Icon, title, bgColor, textColor }) => (
@@ -88,10 +98,10 @@ const App = () => {
         >
           <div 
             className="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden animate-in zoom-in-95 duration-200"
-            onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside the modal
+            onClick={(e) => e.stopPropagation()} 
           >
             <div className="p-6 text-white flex justify-between items-center" style={{ backgroundColor: UM_BLUE }}>
-              <h3 className="font-bold text-xl uppercase tracking-tight">4-Year Budget Overview</h3>
+              <h3 className="font-bold text-xl uppercase tracking-tight">Detailed Budget Plan</h3>
               <button onClick={() => setIsBudgetModalOpen(false)} className="hover:bg-white/10 p-1 rounded-full transition-colors">
                 <X className="w-6 h-6" />
               </button>
@@ -105,10 +115,10 @@ const App = () => {
                 </div>
                 <div className="h-px bg-slate-100"></div>
                 {[
-                  { item: "Tuition & Mandatory Fees", amount: "$240,000", status: "Partially Funded • Gap Needed" },
-                  { item: "Housing & Meal Plan", amount: "$64,000", status: "Parent • Student Loan Funded" },
-                  { item: "Books & Academic Supplies", amount: "$8,000", status: "Student Employment Funded" },
-                  { item: "Personal & Tech Expenses", amount: "$12,000", status: "Student Employment Funded" }
+                  { item: "Tuition & Mandatory Fees", amount: "$52,000", status: "Covered by Grants" },
+                  { item: "Housing & Meal Plan", amount: "$16,500", status: "Partially Funded" },
+                  { item: "Books & Academic Supplies", amount: "$1,800", status: "Gap Needed" },
+                  { item: "Personal & Tech Expenses", amount: "$3,200", status: "Gap Needed" }
                 ].map((row, i) => (
                   <div key={i} className="flex justify-between items-center py-3 border-b border-slate-50 last:border-0">
                     <div>
@@ -155,7 +165,7 @@ const App = () => {
             {['profile', 'academics', 'athletics', 'extra'].map((t) => (
               <button 
                 key={t}
-                onClick={() => setActiveTab(t)} 
+                onClick={() => handleTabChange(t)} 
                 className={`capitalize transition-all pb-1 ${activeTab === t ? 'text-[#00274C] font-bold border-b-2 border-[#00274C]' : 'hover:text-[#00274C]'}`}
               >
                 {t === 'profile' ? 'Overview' : t}
@@ -171,7 +181,7 @@ const App = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
               <p className="font-semibold tracking-widest uppercase text-xs mb-1" style={{ color: '#A5B9D1' }}>
-                Class of 2026 • High School Senior
+                Class of 2025 • High School Senior
               </p>
               <h1 className="text-4xl md:text-5xl font-black mb-2" style={{ color: UM_MAIZE }}>{data.name}</h1>
               <div className="flex items-center gap-2 italic text-sm" style={{ color: '#A5B9D1' }}>
@@ -199,24 +209,29 @@ const App = () => {
                   "From the first time I set foot on the University of Michigan campus as a 6-year-old, I knew I was meant to be a Wolverine. My journey through high school has been defined by excellence in the classroom, leadership on the athletic field, and a commitment to service."
                 </p>
                 
+                {/* Real Photo Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {[...Array(6)].map((_, i) => (
-                    <div key={i} className="aspect-square bg-slate-50 rounded-lg border-2 border-dashed border-slate-200 flex flex-col items-center justify-center p-2 text-center group hover:border-[#00274C] transition-all cursor-pointer hover:bg-white hover:shadow-md">
-                      <Camera className="w-8 h-8 text-slate-300 group-hover:text-[#00274C] mb-2" />
-                      <span className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-[#00274C]">Photo Placeholder {i+1}</span>
+                  {photoUrls.map((url, i) => (
+                    <div key={i} className="aspect-square rounded-lg overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all group relative">
+                      <img 
+                        src={url} 
+                        alt={`Gallery image ${i + 1}`} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        onError={(e) => { e.target.src = 'https://via.placeholder.com/400x400/00274C/FFCB05?text=Update+Link+In+GitHub'; }}
+                      />
                     </div>
                   ))}
                 </div>
               </div>
             </section>
 
-            {/* Detailed Tabs */}
-            <div className="bg-white rounded-xl shadow-sm border min-h-[400px]">
+            {/* Detailed Tabs - Added ref here for scrolling */}
+            <div ref={tabsSectionRef} className="bg-white rounded-xl shadow-sm border min-h-[400px] scroll-mt-20">
               <div className="flex border-b overflow-x-auto scrollbar-hide">
-                <button onClick={() => setActiveTab('profile')} className={`flex-1 p-4 font-bold text-xs uppercase tracking-widest ${activeTab === 'profile' ? 'bg-[#F0F4F8] text-[#00274C] border-b-2 border-[#00274C]' : 'text-slate-400'}`}>Overview</button>
-                <button onClick={() => setActiveTab('academics')} className={`flex-1 p-4 font-bold text-xs uppercase tracking-widest ${activeTab === 'academics' ? 'bg-[#F0F4F8] text-[#00274C] border-b-2 border-[#00274C]' : 'text-slate-400'}`}>Academics</button>
-                <button onClick={() => setActiveTab('athletics')} className={`flex-1 p-4 font-bold text-xs uppercase tracking-widest ${activeTab === 'athletics' ? 'bg-[#F0F4F8] text-[#00274C] border-b-2 border-[#00274C]' : 'text-slate-400'}`}>Athletics</button>
-                <button onClick={() => setActiveTab('extra')} className={`flex-1 p-4 font-bold text-xs uppercase tracking-widest ${activeTab === 'extra' ? 'bg-[#F0F4F8] text-[#00274C] border-b-2 border-[#00274C]' : 'text-slate-400'}`}>Extra</button>
+                <button onClick={() => handleTabChange('profile')} className={`flex-1 p-4 font-bold text-xs uppercase tracking-widest ${activeTab === 'profile' ? 'bg-[#F0F4F8] text-[#00274C] border-b-2 border-[#00274C]' : 'text-slate-400'}`}>Overview</button>
+                <button onClick={() => handleTabChange('academics')} className={`flex-1 p-4 font-bold text-xs uppercase tracking-widest ${activeTab === 'academics' ? 'bg-[#F0F4F8] text-[#00274C] border-b-2 border-[#00274C]' : 'text-slate-400'}`}>Academics</button>
+                <button onClick={() => handleTabChange('athletics')} className={`flex-1 p-4 font-bold text-xs uppercase tracking-widest ${activeTab === 'athletics' ? 'bg-[#F0F4F8] text-[#00274C] border-b-2 border-[#00274C]' : 'text-slate-400'}`}>Athletics</button>
+                <button onClick={() => handleTabChange('extra')} className={`flex-1 p-4 font-bold text-xs uppercase tracking-widest ${activeTab === 'extra' ? 'bg-[#F0F4F8] text-[#00274C] border-b-2 border-[#00274C]' : 'text-slate-400'}`}>Extra</button>
               </div>
               <div className="p-8">
                 {activeTab === 'academics' && (
@@ -286,20 +301,20 @@ const App = () => {
               <SectionHeader icon={Quote} title="What Others Say" bgColor={UM_PALE_BLUE} textColor={UM_BLUE} />
               <div className="p-6 space-y-6">
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Ben sets a new standard in intellectual curiosity and classroom leadership."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Mrs. Teacher, Anatomy Honors</p>
+                  "Insert Academic Quote Here: Highlighting intellectual curiosity and classroom leadership."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Teacher Name], [Subject]</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Ben is the true definition of a student-athlete. His discipline, teamwork, and dedication in the classroom is exactly what he brings to his basketball team."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Coach Keith, Basketball</p>
+                  "Insert Athletic Quote Here: Highlighting discipline, teamwork, and grit on the field."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Coach Name], [Sport]</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Ben is the type of captain who by leads by example and always supports his team."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Genke , Varsity Basketball Teammate</p>
+                  "Insert Leadership Quote Here: Focusing on how he leads by example and supports peers."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Name], [Title/Organization]</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Ben's character and integrity are a gold standard amongst his peers."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Derek Berz, Family Friend and COO Torrance Memorial Hospital</p>
+                  "Insert Character Quote Here: Highlighting integrity and commitment to the community."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Name], [Relationship]</p>
                 </div>
               </div>
             </section>
@@ -319,7 +334,7 @@ const App = () => {
       </main>
 
       <footer className="max-w-5xl mx-auto px-4 mt-16 text-center text-slate-400 text-[10px] border-t pt-8">
-        <p>© 2026 Ben Heinemann • University Of Michigan Funding Request Microsite</p>
+        <p>© 2025 [Family Name] • Michigan Funding Request Microsite</p>
         <p className="mt-2 font-black tracking-[0.2em] text-[#00274C]">GO BLUE!</p>
       </footer>
     </div>
