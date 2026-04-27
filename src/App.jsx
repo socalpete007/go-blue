@@ -44,14 +44,14 @@ const App = () => {
   ];
 
   const data = {
-    name: "[Son's Name]",
+    name: "Ben Heinemann",
     targetUniversity: "University of Michigan",
-    fundingGoal: 25000, 
-    currentFunding: 15000, 
-    academicGpa: "4.XX / 4.0",
-    academicRank: "Top X%",
-    athleticSport: "[Primary Sport]",
-    athleticRole: "[Position/Captain]",
+    fundingGoal: 320000, 
+    currentFunding: 140000, 
+    academicGpa: "4.6 / 4.0",
+    academicRank: "Top 3%",
+    athleticSport: "Basketball",
+    athleticRole: "Forward/Captain",
   };
 
   const SectionHeader = ({ icon: Icon, title, bgColor, textColor }) => (
@@ -206,7 +206,7 @@ const App = () => {
               <SectionHeader icon={Camera} title="About My Journey" bgColor={UM_BLUE} textColor={UM_MAIZE} />
               <div className="p-6">
                 <p className="text-slate-600 leading-relaxed mb-6 italic border-l-4 border-yellow-400 pl-4 text-lg">
-                  "From the first time I set foot on the University of Michigan campus as a 6-year-old, I knew I was meant to be a Wolverine. My journey through high school has been defined by excellence in the classroom, leadership on the athletic field, and a commitment to service."
+                  "From the first time I set foot on the University of Michigan campus as an 8-year-old, I knew I was meant to be a Wolverine. My journey through high school has been defined by excellence in the classroom, leadership on the athletic field, and a commitment to service."
                 </p>
                 
                 {/* Real Photo Grid */}
@@ -334,7 +334,7 @@ const App = () => {
       </main>
 
       <footer className="max-w-5xl mx-auto px-4 mt-16 text-center text-slate-400 text-[10px] border-t pt-8">
-        <p>© 2025 [Family Name] • Michigan Funding Request Microsite</p>
+        <p>© 2026 Benjamin Heinemann • University Of Michigan Funding Request Microsite</p>
         <p className="mt-2 font-black tracking-[0.2em] text-[#00274C]">GO BLUE!</p>
       </footer>
     </div>
