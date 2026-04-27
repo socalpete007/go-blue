@@ -30,7 +30,7 @@ const App = () => {
     academicGpa: "4.65 / 4.0",
     academicRank: "Top 5%",
     athleticSport: "Basketball",
-    athleticRole: "Foward/Captain",
+    athleticRole: "Forward/Captain",
   };
 
   const SectionHeader = ({ icon: Icon, title, bgColor, textColor }) => (
@@ -94,10 +94,10 @@ const App = () => {
                 </div>
                 <div className="h-px bg-slate-100"></div>
                 {[
-                  { item: "Tuition & Mandatory Fees", amount: "$2,000", status: "Covered by Grants" },
-                  { item: "Housing & Meal Plan", amount: "$16,500", status: "Partially Funded" },
-                  { item: "Books & Academic Supplies", amount: "$1,800", status: "Gap Needed" },
-                  { item: "Personal & Tech Expenses", amount: "$3,200", status: "Gap Needed" }
+                  { item: "Tuition & Mandatory Fees", amount: "$140,000", status: "Gap Needed" },
+                  { item: "Housing & Meal Plan", amount: "$64,000", status: "Student Loan" },
+                  { item: "Books & Academic Supplies", amount: "$8,000", status: "Student Jobs" },
+                  { item: "Personal & Tech Expenses", amount: "$12,000", status: "Student Jobs" }
                 ].map((row, i) => (
                   <div key={i} className="flex justify-between items-center py-3 border-b border-slate-50 last:border-0">
                     <div>
@@ -308,7 +308,7 @@ const App = () => {
       </main>
 
       <footer className="max-w-5xl mx-auto px-4 mt-16 text-center text-slate-400 text-[10px] border-t pt-8">
-        <p>© 2026 Ben Heinemann • Michigan Funding Request Microsite</p>
+        <p>© 2026 Ben Heinemann • University Of Michigan Funding Request Microsite</p>
         <p className="mt-2 font-black tracking-[0.2em] text-[#00274C]">GO BLUE!</p>
       </footer>
     </div>
