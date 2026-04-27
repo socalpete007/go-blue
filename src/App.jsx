@@ -25,8 +25,8 @@ const App = () => {
   const data = {
     name: "Ben Heinemann",
     targetUniversity: "University of Michigan",
-    fundingGoal: 224000, 
-    currentFunding: 140000, 
+    fundingGoal: 320000, 
+    currentFunding: 240000, 
     academicGpa: "4.65 / 4.0",
     academicRank: "Top 5%",
     athleticSport: "Basketball",
@@ -80,7 +80,7 @@ const App = () => {
             onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside the modal
           >
             <div className="p-6 text-white flex justify-between items-center" style={{ backgroundColor: UM_BLUE }}>
-              <h3 className="font-bold text-xl uppercase tracking-tight">Detailed Budget Plan</h3>
+              <h3 className="font-bold text-xl uppercase tracking-tight">4-Year Budget Overview</h3>
               <button onClick={() => setIsBudgetModalOpen(false)} className="hover:bg-white/10 p-1 rounded-full transition-colors">
                 <X className="w-6 h-6" />
               </button>
@@ -94,8 +94,8 @@ const App = () => {
                 </div>
                 <div className="h-px bg-slate-100"></div>
                 {[
-                  { item: "Tuition & Mandatory Fees", amount: "$140,000", status: "Gap Needed" },
-                  { item: "Housing & Meal Plan", amount: "$64,000", status: "Student Loan" },
+                  { item: "Tuition & Mandatory Fees", amount: "$240,000", status: "Partially Funded • Gap Needed" },
+                  { item: "Housing & Meal Plan", amount: "$64,000", status: "Parent • Student Loans" },
                   { item: "Books & Academic Supplies", amount: "$8,000", status: "Student Jobs" },
                   { item: "Personal & Tech Expenses", amount: "$12,000", status: "Student Jobs" }
                 ].map((row, i) => (
