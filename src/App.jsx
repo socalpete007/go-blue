@@ -111,14 +111,14 @@ const App = () => {
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-bold text-slate-400 uppercase tracking-widest">
                   <span>Expense Item</span>
-                  <span>Annual Amount</span>
+                  <span>4-Year Aggregate Total</span>
                 </div>
                 <div className="h-px bg-slate-100"></div>
                 {[
-                  { item: "Tuition & Mandatory Fees", amount: "$52,000", status: "Covered by Grants" },
-                  { item: "Housing & Meal Plan", amount: "$16,500", status: "Partially Funded" },
-                  { item: "Books & Academic Supplies", amount: "$1,800", status: "Gap Needed" },
-                  { item: "Personal & Tech Expenses", amount: "$3,200", status: "Gap Needed" }
+                  { item: "Tuition & Mandatory Fees", amount: "$240,000", status: "Partially Funded" },
+                  { item: "Housing & Meal Plan", amount: "$64,000", status: "Funded via Parent and Student Loans" },
+                  { item: "Books & Academic Supplies", amount: "$7,500", status: "Funded via Part-Time Employment" },
+                  { item: "Personal & Tech Expenses", amount: "$12,000", status: "Funded via Part-Time Employment" }
                 ].map((row, i) => (
                   <div key={i} className="flex justify-between items-center py-3 border-b border-slate-50 last:border-0">
                     <div>
