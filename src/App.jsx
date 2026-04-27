@@ -22,6 +22,17 @@ const App = () => {
   const UM_LIGHT_BLUE = "#1D4477"; 
   const UM_PALE_BLUE = "#F0F4F8"; 
 
+  // PHOTO CONFIGURATION
+  // Replace these placeholders with the "Direct Links" from your Cloudinary collection
+  const photoUrls = [
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+1",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+2",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+3",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+4",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+5",
+    "https://via.placeholder.com/600x600/00274C/FFCB05?text=Photo+6"
+  ];
+
   const data = {
     name: "Ben Heinemann",
     targetUniversity: "University of Michigan",
