@@ -94,7 +94,7 @@ const App = () => {
                 </div>
                 <div className="h-px bg-slate-100"></div>
                 {[
-                  { item: "Tuition & Mandatory Fees", amount: "$52,000", status: "Covered by Grants" },
+                  { item: "Tuition & Mandatory Fees", amount: "$2,000", status: "Covered by Grants" },
                   { item: "Housing & Meal Plan", amount: "$16,500", status: "Partially Funded" },
                   { item: "Books & Academic Supplies", amount: "$1,800", status: "Gap Needed" },
                   { item: "Personal & Tech Expenses", amount: "$3,200", status: "Gap Needed" }
