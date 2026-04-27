@@ -25,8 +25,8 @@ const App = () => {
   const data = {
     name: "Ben Heinemann",
     targetUniversity: "University of Michigan",
-    fundingGoal: 25000, 
-    currentFunding: 15000, 
+    fundingGoal: 224000, 
+    currentFunding: 140000, 
     academicGpa: "4.65 / 4.0",
     academicRank: "Top 5%",
     athleticSport: "Basketball",
