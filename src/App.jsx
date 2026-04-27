@@ -39,7 +39,7 @@ const App = () => {
     "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319106/C4_Ben-Growing-Up-Michigan_ktcjmc.jpg",
     "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319109/A1_Ben-Academic_cklq6d.jpg",
     "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319104/B1_Ben-Basketball_hiayts.jpg",
-    "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319103/A2_Ben-Academic_a2ufje.jpg",
+    "https://res.cloudinary.com/dapijn1ts/image/upload/v1777322037/A2_Ben-Academic_pff8bx.jpg",
     "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319105/A4_Ben-Academic_vcxldb.jpg"
   ];
 
