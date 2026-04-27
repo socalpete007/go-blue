@@ -95,9 +95,9 @@ const App = () => {
                 <div className="h-px bg-slate-100"></div>
                 {[
                   { item: "Tuition & Mandatory Fees", amount: "$240,000", status: "Partially Funded • Gap Needed" },
-                  { item: "Housing & Meal Plan", amount: "$64,000", status: "Parent • Student Loans" },
-                  { item: "Books & Academic Supplies", amount: "$8,000", status: "Student Jobs" },
-                  { item: "Personal & Tech Expenses", amount: "$12,000", status: "Student Jobs" }
+                  { item: "Housing & Meal Plan", amount: "$64,000", status: "Parent • Student Loan Funded" },
+                  { item: "Books & Academic Supplies", amount: "$8,000", status: "Student Employment Funded" },
+                  { item: "Personal & Tech Expenses", amount: "$12,000", status: "Student Employment Funded" }
                 ].map((row, i) => (
                   <div key={i} className="flex justify-between items-center py-3 border-b border-slate-50 last:border-0">
                     <div>
