@@ -327,7 +327,7 @@ const App = () => {
                   {[...Array(9)].map((_, i) => <div key={i} className="w-4 h-4 bg-[#00274C] rounded-sm"></div>)}
                 </div>
               </div>
-              <p className="text-xs font-black mb-1 uppercase tracking-widest" style={{ color: UM_MAIZE }}>Scan for Video Intro</p>
+              <p className="text-xs font-black mb-1 uppercase tracking-widest" style={{ color: UM_MAIZE }}>Video Intro Arriving Soon!</p>
               <p className="text-[10px] opacity-75 px-4">Watch a personal statement regarding my journey to the University of Michigan.</p>
             </div>
           </div>
