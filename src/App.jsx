@@ -297,7 +297,7 @@ const App = () => {
                 {activeTab === 'athletics' && (
                   <div className="animate-in fade-in slide-in-from-bottom-2 duration-300">
                     <h3 className="font-bold mb-4 text-[#00274C] text-xl">Athletic Record</h3>
-                    <p className="text-slate-600 italic">Highlighting 2 strong years of varsity commitment and leadership as a senior captain. Selected as MVP of my Varsity </p>
+                    <p className="text-slate-600 italic">Highlighting 2 strong years of varsity commitment and leadership as a senior captain. Selected MVP of my Varsity Basketball team. Also selected 1st Team All-Conference South Bay (Los Angeles County)  </p>
                   </div>
                 )}
                 {activeTab === 'extra' && (
