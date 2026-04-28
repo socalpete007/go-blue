@@ -334,7 +334,7 @@ const App = () => {
       </main>
 
       <footer className="max-w-5xl mx-auto px-4 mt-16 text-center text-slate-400 text-[10px] border-t pt-8">
-        <p>© 2026 Benjamin Heinemann • University Of Michigan Funding Request Microsite</p>
+        <p>© 2026 Benjamin Heinemann • University Of Michigan Funding Request</p>
         <p className="mt-2 font-black tracking-[0.2em] text-[#00274C]">GO BLUE!</p>
       </footer>
     </div>
