@@ -191,7 +191,7 @@ const App = () => {
             </div>
             <div className="p-5 rounded-xl border flex items-center gap-6" style={{ backgroundColor: UM_LIGHT_BLUE, borderColor: 'rgba(255,255,255,0.1)' }}>
               <div className="text-right">
-                <p className="text-xs uppercase font-bold mb-1" style={{ color: '#A5B9D1' }}>Funding Bridge Needed</p>
+                <p className="text-xs uppercase font-bold mb-1" style={{ color: '#A5B9D1' }}>4-Year Funding Bridge Needed</p>
                 <p className="text-3xl font-black" style={{ color: UM_MAIZE }}>${(data.fundingGoal - data.currentFunding).toLocaleString()}</p>
               </div>
               <ProgressCircle current={data.currentFunding} total={data.fundingGoal} />
