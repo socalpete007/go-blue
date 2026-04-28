@@ -351,7 +351,7 @@ const App = () => {
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
                   "Ben's dedication and dependability to serving as a hospital volunteer were very impressible and admirable."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Derek Berze, Family Friend and COO of Torrance Memorial Community Hospital</p>
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Derek Berz, COO • Torrance Memorial Community Hospital</p>
                 </div>
               </div>
             </section>
