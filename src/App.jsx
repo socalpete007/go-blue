@@ -253,7 +253,7 @@ const App = () => {
                   <div className="animate-in fade-in slide-in-from-bottom-2 duration-300">
                     <h3 className="font-bold mb-4 text-[#00274C] text-xl">Why Michigan?</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      Michigan is not just a destination; it's the standard. I am driven to join "The Leaders and Best" to contribute to a legacy of innovation and community leadership. As one of the top public health universities in the world, U-M stands out for its ability to connect classroom learning with real-world impact. A class like “The U.S. Healthcare System” (PUBHLTH 326) would deepen my understanding of healthcare delivery, access, and financing, while study abroad programs in places like Dublin or the Dominican Republic would let me explore different health systems and cultures. U-M’s diversity and global focus would shape how I approach medicine and public health, especially since I’m so interested in the systemic problems facing healthcare.
+                      Michigan is not just a destination; it's the standard. I am driven to join "The Leaders and Best" to contribute to a legacy of innovation and community leadership. As one of the top public health universities in the world, U-M stands out for its ability to connect classroom learning with real-world impact. The cirriculum would deepen my understanding of healthcare delivery, access, and financing, while study abroad programs in places like Dublin or the Dominican Republic would let me explore different health systems and cultures. U-M’s diversity and global focus would shape how I approach medicine and public health, especially since I’m so interested in the systemic problems facing healthcare.
                     </p>
                   </div>
                 )}
@@ -276,7 +276,7 @@ const App = () => {
           {/* Right Sidebar */}
           <div className="space-y-8">
             <section className="bg-white rounded-xl shadow-sm border overflow-hidden">
-              <SectionHeader icon={DollarSign} title="Funding Status" bgColor="#F8FAFC" textColor={UM_BLUE} />
+              <SectionHeader icon={DollarSign} title="4-Year Funding Status" bgColor="#F8FAFC" textColor={UM_BLUE} />
               <div className="p-6 space-y-4">
                 <div className="flex justify-between text-sm py-1 border-b">
                   <span className="text-slate-600 font-medium">Verified University Aid</span>
