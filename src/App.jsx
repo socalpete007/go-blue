@@ -241,6 +241,7 @@ const App = () => {
                       <li className="p-4 bg-slate-50 border rounded-lg hover:shadow-sm transition-all">
                         <p className="font-bold text-slate-800">National Honor Society</p>
                         <p className="text-sm text-slate-500">Member since Sophomore year, maintaining consistent excellence.</p>
+                        <p className="text-sm text-slate-500">Ranked number 14 in graduating class of 375 students.</p>
                       </li>
                       <li className="p-4 bg-slate-50 border rounded-lg hover:shadow-sm transition-all">
                         <p className="font-bold text-slate-800">AP Scholar with Distinction</p>
