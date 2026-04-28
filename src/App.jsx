@@ -15,6 +15,7 @@ import {
 const App = () => {
   const [activeTab, setActiveTab] = useState('profile');
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
+  const [isAdmissionModalOpen, setIsAdmissionModalOpen] = useState(false);
   
   // Create a reference to the tabs section for anchor scrolling
   const tabsSectionRef = useRef(null);
@@ -33,7 +34,6 @@ const App = () => {
   const UM_PALE_BLUE = "#F0F4F8"; 
 
   // PHOTO CONFIGURATION
-  // Replace these placeholders with the "Direct Links" from your Cloudinary collection
   const photoUrls = [
     "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319107/C3_Ben-Growing-Up-Michigan_qmppuk.jpg",
     "https://res.cloudinary.com/dapijn1ts/image/upload/v1777319106/C4_Ben-Growing-Up-Michigan_ktcjmc.jpg",
@@ -90,6 +90,42 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-12">
+      
+      {/* Admission Letter Modal */}
+      {isAdmissionModalOpen && (
+        <div 
+          className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md animate-in fade-in"
+          onClick={() => setIsAdmissionModalOpen(false)}
+        >
+          <div 
+            className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden animate-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()} 
+          >
+            <div className="p-4 text-white flex justify-between items-center" style={{ backgroundColor: UM_BLUE }}>
+              <h3 className="font-bold text-lg uppercase tracking-tight">University of Michigan Admission</h3>
+              <button onClick={() => setIsAdmissionModalOpen(false)} className="hover:bg-white/10 p-1 rounded-full transition-colors">
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="p-2 bg-slate-100 flex justify-center items-center max-h-[80vh] overflow-auto">
+              <img 
+                src="https://res.cloudinary.com/dapijn1ts/image/upload/v1777343111/A5_Ben-Academic_ldnzx7.jpg" 
+                alt="University of Michigan Admission Letter" 
+                className="max-w-full h-auto rounded shadow-sm"
+              />
+            </div>
+            <div className="p-4 bg-white text-center">
+               <button 
+                 onClick={() => setIsAdmissionModalOpen(false)} 
+                 className="px-8 py-2 font-bold text-slate-600 bg-slate-50 border border-slate-200 rounded-lg hover:bg-slate-100 transition-colors"
+               >
+                 Close
+               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Budget Modal Overlay */}
       {isBudgetModalOpen && (
         <div 
@@ -186,7 +222,7 @@ const App = () => {
               <h1 className="text-4xl md:text-5xl font-black mb-2" style={{ color: UM_MAIZE }}>{data.name}</h1>
               <div className="flex items-center gap-2 italic text-sm" style={{ color: '#A5B9D1' }}>
                 <Target className="w-4 h-4" />
-                <span>Admitted to: <span className="font-bold underline">{data.targetUniversity}</span></span>
+                <span>Admitted to: <button onClick={() => setIsAdmissionModalOpen(true)} className="font-bold underline hover:text-[#FFCB05] transition-colors">{data.targetUniversity}</button></span>
               </div>
             </div>
             <div className="p-5 rounded-xl border flex items-center gap-6" style={{ backgroundColor: UM_LIGHT_BLUE, borderColor: 'rgba(255,255,255,0.1)' }}>
