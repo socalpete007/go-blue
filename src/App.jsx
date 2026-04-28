@@ -338,20 +338,20 @@ const App = () => {
               <SectionHeader icon={Quote} title="What Others Say" bgColor={UM_PALE_BLUE} textColor={UM_BLUE} />
               <div className="p-6 space-y-6">
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Insert Academic Quote Here: Highlighting intellectual curiosity and classroom leadership."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Teacher Name], [Subject]</p>
+                  "Ben's intellectual curiosity and classroom leadership have made such an impact on his fellow students."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">—  Mrs. Smith, Honors Biology</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Insert Athletic Quote Here: Highlighting discipline, teamwork, and grit on the field."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Coach Name], [Sport]</p>
+                  "Ben is a true student-athlete.  His discipline, teamwork, and commitment on the court is a reflection of his approach to his academic studies."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Coach Keith Prendergast, Basketball</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Insert Leadership Quote Here: Focusing on how he leads by example and supports peers."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Name], [Title/Organization]</p>
+                  "Ben's positive influence on his coaches and teammates shows what a well-rounded person he is."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Braxton Lee, Varsity Basketball Teammate</p>
                 </div>
                 <div className="italic text-slate-600 text-sm leading-relaxed border-l-4 border-[#00274C] pl-4">
-                  "Insert Character Quote Here: Highlighting integrity and commitment to the community."
-                  <p className="mt-2 font-bold text-[#00274C] not-italic">— [Name], [Relationship]</p>
+                  "Ben's dedication and dependability to serving as a hospital volunteer were very impressible and admirable."
+                  <p className="mt-2 font-bold text-[#00274C] not-italic">— Derek Berze, Family Friend and COO of Torrance Memorial Community Hospital</p>
                 </div>
               </div>
             </section>
