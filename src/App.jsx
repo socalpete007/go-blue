@@ -181,7 +181,7 @@ const App = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
               <p className="font-semibold tracking-widest uppercase text-xs mb-1" style={{ color: '#A5B9D1' }}>
-                Class of 2025 • High School Senior
+                Class of 2026 • High School Senior
               </p>
               <h1 className="text-4xl md:text-5xl font-black mb-2" style={{ color: UM_MAIZE }}>{data.name}</h1>
               <div className="flex items-center gap-2 italic text-sm" style={{ color: '#A5B9D1' }}>
@@ -260,7 +260,7 @@ const App = () => {
                 {activeTab === 'athletics' && (
                   <div className="animate-in fade-in slide-in-from-bottom-2 duration-300">
                     <h3 className="font-bold mb-4 text-[#00274C] text-xl">Athletic Record</h3>
-                    <p className="text-slate-600 italic">Highlighting 4 years of varsity commitment and leadership as a team captain.</p>
+                    <p className="text-slate-600 italic">Highlighting 2 strong years of varsity commitment and leadership as a senior captain. Selected as MVP of my Varsity </p>
                   </div>
                 )}
                 {activeTab === 'extra' && (
